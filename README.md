@@ -1,5 +1,5 @@
 
-<html lang="en">
+<html>
 <head>
     <meta charset="UTF-8">
     <title>Meherab Mustafa - Portfolio</title>
@@ -15,13 +15,26 @@
             margin: 0;
             padding: 0;
             text-align: center;
+            opacity: 0; /* hidden initially */
+            transition: opacity 0.5s ease-in-out;
+        }
+
+        body.loaded {
+            opacity: 1; /* show after load */
         }
 
         a { text-decoration: none; transition: color 0.3s, background 0.3s; }
 
         .container { width: 80%; margin: auto; padding: 40px 0; }
 
-        h1 { font-size: 28px; color: #00bcd4; margin-bottom: 20px; }
+        /* Headings with Kristen ITC and fallback */
+        h1, h2 { 
+            font-family: 'Kristen ITC', Arial, sans-serif; 
+            color: #00bcd4;
+            margin-top: 40px;
+        }
+
+        h1 { font-size: 28px; margin-bottom: 20px; }
 
         .name { font-size: 22px; color: #ffffff; margin: 5px 0; }
 
@@ -53,6 +66,7 @@
 
         .icons a:hover { color: #00bcd4; transform: scale(1.2); }
 
+        /* Download CV Icon */
         .cv-button {
             display: inline-block;
             padding: 10px 15px;
@@ -63,44 +77,40 @@
             margin: 5px;
             transition: 0.3s all;
         }
-
         .cv-button:hover { background-color: #00bcd4; color: #121212; box-shadow: 0 4px 15px rgba(0,188,212,0.4); }
 
-        h2 {
-            color: #00bcd4;
-            margin-top: 60px;
-            display: inline-block;
-        }
-
-        p { font-size: 16px; line-height: 1.8; text-align: justify; }
+        p { line-height: 1.8; text-align: justify; font-size: 10px; } /* subtle font size for paragraphs */
 
         .left-text { text-align: left; margin-top: 20px; }
 
         .contact { text-align: left; margin-top: 40px; }
 
         /* Highlight color cyan */
-        .highlight, .edu-year { color: #00ffff; font-weight: bold; }
+        .highlight, .edu-year { color: #00ffff; font-weight: bold; font-size: 12px; }
+
+        /* Experience duration smaller */
+        .left-text li { font-size: 10px; margin-bottom: 12px; }
 
         @media screen and (max-width: 768px) {
             .container { width: 90%; padding: 20px 0; }
             h1 { font-size: 24px; }
+            h2 { font-size: 22px; }
             .name { font-size: 20px; }
             .animated-text { font-size: 16px; }
             img { width: 140px; }
             .cv-button { padding: 8px 12px; font-size: 16px; }
             .icons a { font-size: 20px; }
-            p, ul.left-text li { font-size: 15px; }
-            h2 { font-size: 20px; }
+            p, ul.left-text li { font-size: 9px; }
         }
 
         @media screen and (max-width: 480px) {
             img { width: 120px; }
             h1 { font-size: 22px; }
+            h2 { font-size: 20px; }
             .name { font-size: 18px; }
             .animated-text { font-size: 14px; }
             .cv-button { padding: 6px 10px; font-size: 14px; }
-            h2 { font-size: 18px; }
-            p, ul.left-text li { font-size: 14px; }
+            p, ul.left-text li { font-size: 8px; }
         }
 
     </style>
@@ -225,12 +235,20 @@ http://www.linkedin.com/in/meherab-mustafa-424a14295" target="_blank">
     <div class="contact">
         Address: Krishibid Heights, Jahangirnagar Housing Society, B-block, Savar, Dhaka-1340, Bangladesh<br><br>
 
-        <a href="mailto:meherabmustafa01@gmail.com" class="cv-button">meherabmustafa01@gmail.com</a>
+        <a href="mailto:Meherabmustafa01@gmail.com" class="cv-button">Meherabmustafa01@gmail.com</a>
         <a href="mailto:meherab-2017114310@bot.du.ac.bd" class="cv-button">meherab-2017114310@bot.du.ac.bd</a><br><br>
 
         📞 +8801796498307
     </div>
 
 </div>
+
+<script>
+    // Fade-in after full page load
+    window.addEventListener('load', () => {
+        document.body.classList.add('loaded');
+    });
+</script>
+
 </body>
 </html>
