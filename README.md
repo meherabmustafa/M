@@ -21,7 +21,7 @@
 
         .container { width: 80%; margin: auto; padding: 40px 0; }
 
-        h1 { font-size: 28px; color: #00bcd4; margin-bottom: 10px; }
+        h1 { font-size: 28px; color: #00bcd4; margin-bottom: 20px; }
 
         .name { font-size: 22px; color: #ffffff; margin: 5px 0; }
 
@@ -40,7 +40,7 @@
 
         img {
             border-radius: 50%;
-            margin-top: 20px;
+            margin: 20px 0;
             width: 180px;
         }
 
@@ -55,10 +55,10 @@
 
         .cv-button {
             display: inline-block;
-            padding: 10px 25px;
+            padding: 10px 15px;
             border: 1px solid #00bcd4;
             color: #00bcd4;
-            font-size: 15px;
+            font-size: 18px;
             border-radius: 5px;
             margin: 5px;
             transition: 0.3s all;
@@ -69,8 +69,7 @@
         h2 {
             color: #00bcd4;
             margin-top: 60px;
-            display: inline-block; /* underline removed */
-            padding-bottom: 0;
+            display: inline-block;
         }
 
         p { font-size: 16px; line-height: 1.8; text-align: justify; }
@@ -80,8 +79,7 @@
         .contact { text-align: left; margin-top: 40px; }
 
         /* Highlight color cyan */
-        .highlight { color: #00ffff; font-weight: bold; }
-        .edu-year { color: #00ffff; font-weight: bold; }
+        .highlight, .edu-year { color: #00ffff; font-weight: bold; }
 
         @media screen and (max-width: 768px) {
             .container { width: 90%; padding: 20px 0; }
@@ -89,7 +87,7 @@
             .name { font-size: 20px; }
             .animated-text { font-size: 16px; }
             img { width: 140px; }
-            .cv-button { padding: 8px 18px; font-size: 14px; }
+            .cv-button { padding: 8px 12px; font-size: 16px; }
             .icons a { font-size: 20px; }
             p, ul.left-text li { font-size: 15px; }
             h2 { font-size: 20px; }
@@ -100,7 +98,7 @@
             h1 { font-size: 22px; }
             .name { font-size: 18px; }
             .animated-text { font-size: 14px; }
-            .cv-button { padding: 6px 15px; font-size: 13px; }
+            .cv-button { padding: 6px 10px; font-size: 14px; }
             h2 { font-size: 18px; }
             p, ul.left-text li { font-size: 14px; }
         }
@@ -111,22 +109,28 @@
 <body>
 <div class="container">
 
+    <!-- Header Section -->
     <h1>HI THERE!</h1>
+    <img src="profile.jpg.jpeg" alt="Profile Image">
     <div class="name">I’m Meherab Mustafa</div>
     <div class="animated-text">Bioscience Student & Researcher</div>
-    <img src="profile.jpg.jpeg" alt="Profile Image">
 
+    <!-- Icons -->
     <div class="icons" style="margin-top: 15px;">
         <a href="mailto:meherabmustafa01@gmail.com" target="_blank">
             <i class="fa-solid fa-envelope"></i>
         </a>
-        <a href="https://www.linkedin.com/in/YOUR-LINKEDIN-USERNAME" target="_blank">
+        <a href="
+http://www.linkedin.com/in/meherab-mustafa-424a14295" target="_blank">
             <i class="fa-brands fa-linkedin"></i>
         </a>
     </div>
 
+    <!-- Download CV Icon -->
     <div>
-        <a href="cv.pdf" target="_blank" class="cv-button">Download CV</a>
+        <a href="cv.pdf" download class="cv-button" title="Download CV">
+            <i class="fa-solid fa-file-arrow-down"></i>
+        </a>
     </div>
 
     <!-- About Me -->
@@ -138,14 +142,14 @@
     </p>
 
     <p>
-        Currently, I work as a Research Fellow at Bangladesh Space Research and Remote Sensing Organization (SPARRSO).
+        Currently, I work as a Research Fellow at <span class="edu-year">Bangladesh Space Research and Remote Sensing Organization (SPARRSO)</span>.
         My role involves satellite images analysis, conducting environmental assessments and providing support to
         evidence-based solutions related to Forest Management and Land-Use Planning.
     </p>
 
     <p>
         Before joining SPARRSO, I worked as a Thesis Researcher at the Industrial Microbiology Laboratory of
-        Bangladesh Council of Scientific and Industrial Research (BCSIR) where I engaged in laboratory-based research,
+        <span class="edu-year">Bangladesh Council of Scientific and Industrial Research (BCSIR)</span> where I engaged in laboratory-based research,
         developed techniques to optimize microbial processes and acquired practical experience in designing
         experiments, analyzing data and producing scientific reports.
     </p>
@@ -188,11 +192,11 @@
     <!-- Experience -->
     <h2>My Experience</h2>
     <ul class="left-text">
-        <li><strong><span class="highlight">Research Fellow</span>, Forestry Department</strong><br>
+        <li><strong><span class="edu-year">Research Fellow</span>, Forestry Department</strong><br>
             Institute: Bangladesh Space Research and Remote Sensing Organization (SPARRSO)<br>
             Duration: 22 October - Present
         </li>
-        <li><strong><span class="highlight">Thesis Researcher</span>, Microbial Biotechnology Department</strong><br>
+        <li><strong><span class="edu-year">Thesis Researcher</span>, Microbial Biotechnology Department</strong><br>
             Institute: Bangladesh Council of Scientific and Industrial Research (BCSIR)<br>
             Duration: 30 January, 2024 - 30 July, 2025
         </li>
