@@ -138,7 +138,7 @@ http://www.linkedin.com/in/meherab-mustafa-424a14295" target="_blank">
 
     <!-- Download CV Icon -->
     <div>
-        <a href="cv.pdf" download class="cv-button" title="Download CV">
+        <a href="CV(Meherab Mustafa).pdf" download class="cv-button" title="Download CV">
             <i class="fa-solid fa-file-arrow-down"></i>
         </a>
     </div>
