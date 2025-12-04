@@ -114,7 +114,7 @@
     <h1>HI THERE!</h1>
     <div class="name">I’m Meherab Mustafa</div>
     <div class="animated-text">Bioscience Student & Researcher</div>
-    <img src="profile.jpg" alt="Profile Image">
+    <img src="profile.jpg.jepg" alt="Profile Image">
 
     <div class="icons" style="margin-top: 15px;">
         <a href="mailto:meherabmustafa01@gmail.com" target="_blank">
