@@ -3,176 +3,232 @@
 <head>
     <meta charset="UTF-8">
     <title>Meherab Mustafa - Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <!-- ✅ FONT -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+    <!-- ✅ ICON -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 
     <style>
-        body {
-            font-family: "Times New Roman", serif;
-            background-color: #121212;
-            color: #f5f5f5;
+        * {
             margin: 0;
             padding: 0;
-            text-align: center;
-            opacity: 0;
-            transition: opacity 0.5s ease-in-out;
+            box-sizing: border-box;
         }
 
-        body.loaded { opacity: 1; }
+        body {
+            font-family: Arial, sans-serif;
+            background: #000;
+            color: #fff;
+        }
 
-        a { text-decoration: none !important; }
+        section {
+            padding: 40px 20px;
+        }
 
-        .container { width: 80%; margin: auto; padding: 40px 0; }
-
-        /* ✅ CLEAN HEADINGS — NO LINE, NO UNDERLINE, NO SHADOW */
-        h1, h2 { 
-            font-family: 'Kristen ITC', Arial, sans-serif; 
+        h1, h2 {
+            font-family: 'Kristen ITC', 'Poppins', sans-serif;
             color: #00bcd4;
-            margin-top: 40px;
-            margin-bottom: 20px;
-            text-decoration: none !important;
-            border: none !important;
-            box-shadow: none !important;
+            margin-bottom: 12px;
         }
 
-        h1 { font-size: 28px; }
+        /* ✅ HERO SECTION */
+        .hero {
+            text-align: center;
+            padding-top: 60px;
+        }
 
-        .name { font-size: 22px; color: #ffffff; margin: 5px 0; }
+        .hero p {
+            font-size: 14px;
+            opacity: 0.9;
+        }
 
-        /* ✅ ONLY typing cursor here */
+        .hero img {
+            width: 160px;
+            border-radius: 50%;
+            margin: 16px 0;
+        }
+
         .animated-text {
             font-size: 18px;
-            color: #00ffff;
-            border-right: 2px solid #00ffff;
-            white-space: nowrap;
-            overflow: hidden;
-            display: inline-block;
-            animation: typing 3s steps(30, end) infinite, blink 0.75s step-end infinite;
-        }
-
-        @keyframes typing {
-            0%,100% { width: 0; } 
-            50% { width: 270px; } 
-        }
-
-        @keyframes blink { 50% { border-color: transparent; } }
-
-        img {
-            border-radius: 50%;
-            margin: 20px 0;
-            width: 180px;
-        }
-
-        .icons a {
-            margin: 0 10px;
-            font-size: 24px;
-            color: #f5f5f5;
-        }
-
-        .icons a:hover { color: #00bcd4; }
-
-        /* ✅ Soft CV button (no hard border look) */
-        .cv-button {
-            display: inline-block;
-            padding: 10px 15px;
-            background: #1f1f1f;
+            margin-top: 6px;
             color: #00bcd4;
-            font-size: 18px;
-            border-radius: 6px;
-            margin: 5px;
+            animation: glow 2s infinite alternate;
         }
 
-        .cv-button:hover {
-            background-color: #00bcd4;
-            color: #121212;
+        @keyframes glow {
+            0% { opacity: 0.6; }
+            100% { opacity: 1; }
         }
 
-        p {
-            line-height: 1.8;
-            text-align: justify;
-            font-size: 10px;
+        /* ✅ CV ICON */
+        .cv-icon {
+            margin-top: 14px;
+            display: inline-block;
+            color: #00bcd4;
+            font-size: 22px;
+            text-decoration: none;
         }
 
-        .left-text { text-align: left; margin-top: 20px; }
+        /* ✅ ABOUT ME */
+        #about p {
+            font-size: 8px;
+            line-height: 1.6;
+            opacity: 0.9;
+        }
 
-        .contact { text-align: left; margin-top: 40px; }
+        .highlight {
+            color: #00bcd4;
+            font-weight: 600;
+        }
 
-        .edu-year {
-            color: #00ffff;
-            font-weight: bold;
+        /* ✅ EXPERIENCE */
+        .experience-item {
+            margin-bottom: 18px;
+        }
+
+        .position {
+            color: #00bcd4;
+            font-size: 16px;
+            font-weight: 600;
+        }
+
+        .duration {
             font-size: 12px;
+            opacity: 0.8;
         }
 
-        .left-text li { font-size: 10px; margin-bottom: 12px; }
+        /* ✅ EDUCATION */
+        .edu-item {
+            margin-bottom: 18px;
+        }
+
+        .year, .institute {
+            font-size: 15px;
+            font-weight: 600;
+            color: #00bcd4;
+        }
+
+        .degree, .subject {
+            font-size: 13px;
+            opacity: 0.9;
+        }
+
+        /* ✅ SKILLS */
+        .skills span {
+            display: inline-block;
+            margin: 6px;
+            padding: 6px 12px;
+            border: 1px solid #00bcd4;
+            border-radius: 20px;
+            font-size: 13px;
+        }
+
+        /* ✅ FOOTER LINKS */
+        .links {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .links a {
+            color: #00bcd4;
+            margin: 0 12px;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        /* ✅ MOBILE FIX */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 26px;
+            }
+
+            .animated-text {
+                font-size: 16px;
+            }
+        }
     </style>
 </head>
 
 <body>
-<div class="container">
 
-    <h1>HI THERE!</h1>
+    <!-- ✅ HERO -->
+    <section class="hero">
+        <p>Hi There</p>
 
-    <img src="profile.jpg.jpeg" alt="Profile Image">
+        <img src="your-photo.jpg.jpeg" alt="My Photo">
 
-    <div class="name">I’m Meherab Mustafa</div>
-    <div class="animated-text">Bioscience Student & Researcher</div>
+        <h1>Meherab Mustafa</h1>
 
-    <div class="icons" style="margin-top: 15px;">
-        <a href="mailto:Meherabmustafa01@gmail.com"><i class="fa-solid fa-envelope"></i></a>
-        <a href="https://www.linkedin.com/in/YOUR-LINKEDIN-USERNAME" target="_blank">
-            <i class="fa-brands fa-linkedin"></i>
+        <div class="animated-text">Bioscience Student & Researcher</div>
+
+        <a class="cv-icon" href="cv.pdf" download>
+            <i class="fas fa-download"></i>
         </a>
+    </section>
+
+    <!-- ✅ ABOUT ME -->
+    <section id="about">
+        <h2>About Me</h2>
+        <p>
+            I am currently working as a research fellow at 
+            <span class="highlight">SPARRSO</span> and a thesis researcher at 
+            <span class="highlight">BCSIR</span>. My research interest focuses on microbiology, remote sensing and environmental analysis.
+        </p>
+    </section>
+
+    <!-- ✅ EXPERIENCE -->
+    <section class="experience">
+        <h2>Experience</h2>
+
+        <div class="experience-item">
+            <div class="position">Research Fellow</div>
+            <div class="duration">2024 - Present</div>
+        </div>
+
+        <div class="experience-item">
+            <div class="position">Thesis Researcher</div>
+            <div class="duration">2023 - 2024</div>
+        </div>
+    </section>
+
+    <!-- ✅ EDUCATION -->
+    <section class="education">
+        <h2>Education</h2>
+
+        <div class="edu-item">
+            <div class="year">2023 - 2025</div>
+            <div class="institute">MS in Bioscience</div>
+            <div class="degree">Master of Science</div>
+            <div class="subject">Biological Sciences</div>
+        </div>
+
+        <div class="edu-item">
+            <div class="year">2018 - 2022</div>
+            <div class="institute">BSc in Bioscience</div>
+            <div class="degree">Bachelor of Science</div>
+            <div class="subject">Biological Sciences</div>
+        </div>
+    </section>
+
+    <!-- ✅ SKILLS -->
+    <section class="skills">
+        <h2>Skills</h2>
+        <span>Remote Sensing</span>
+        <span>Microbiology</span>
+        <span>GIS</span>
+        <span>Data Analysis</span>
+        <span>Research Writing</span>
+    </section>
+
+    <!-- ✅ CONTACT LINKS -->
+    <div class="links">
+        <a href="mailto:yourmail@gmail.com"><i class="fas fa-envelope"></i></a>
+        <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="https://github.com" target="_blank"><i class="fab fa-github"></i></a>
     </div>
-
-    <div>
-        <a href="cv.pdf" download class="cv-button">
-            <i class="fa-solid fa-file-arrow-down"></i>
-        </a>
-    </div>
-
-    <h2>About Me</h2>
-
-    <p>
-        Currently, I work as a Research Fellow at 
-        <span class="edu-year">Bangladesh Space Research and Remote Sensing Organization (SPARRSO)</span>.
-    </p>
-
-    <p>
-        Before joining SPARRSO, I worked as a Thesis Researcher at 
-        <span class="edu-year">Bangladesh Council of Scientific and Industrial Research (BCSIR)</span>.
-    </p>
-
-    <h2>Education</h2>
-
-    <div class="left-text">
-        <p><span class="edu-year">2023-2025</span><br>Master of Science in Botany</p>
-        <p><span class="edu-year">2018-2023</span><br>Bachelor of Science in Botany</p>
-    </div>
-
-    <h2>My Experience</h2>
-
-    <ul class="left-text">
-        <li><span class="edu-year">Research Fellow</span> — SPARRSO</li>
-        <li><span class="edu-year">Thesis Researcher</span> — BCSIR</li>
-    </ul>
-
-    <h2>Contact Me</h2>
-
-    <div class="contact">
-        <a href="mailto:Meherabmustafa01@gmail.com" class="cv-button">Personal Email</a>
-        <a href="mailto:meherab-2017114310@bot.du.ac.bd" class="cv-button">University Email</a><br><br>
-        📞 +8801796498307
-    </div>
-
-</div>
-
-<script>
-    window.addEventListener('load', () => {
-        document.body.classList.add('loaded');
-    });
-</script>
 
 </body>
 </html>
-
-    
