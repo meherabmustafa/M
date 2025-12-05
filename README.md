@@ -1,12 +1,8 @@
-
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Portfolio - Experience & Skills</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
     <style>
-        /* Paste your CSS here exactly as you gave me */
         /* Dark Theme */
         body {
             font-family: "Times New Roman", serif;
@@ -96,7 +92,6 @@
             box-shadow: 0 0 15px rgba(0, 255, 0, 0.1);
             border-left: 6px solid #00ff66;
             transition: 0.3s;
-            text-align: left;
         }
 
         .card:hover {
@@ -108,7 +103,7 @@
             color: #00ff66;
             font-size: 18px;
             font-weight: bold;
-            margin-bottom: 10px;
+            text-align: left;
         }
 
         .card p {
@@ -116,6 +111,7 @@
             line-height: 1.6;
             font-size: 13px;
             color: #e0e0e0;
+            text-align: left;
         }
 
         @media screen and (max-width: 768px) {
@@ -141,49 +137,133 @@
         }
     </style>
 </head>
+
 <body>
+<div class="container">
 
-    <div class="container">
+    <!-- Header Section -->
+    <h1>HI THERE!</h1>
+    <img src="profile.jpg.jpeg" alt="Meherab Mustafa Profile Picture">
+    <div class="name">I’m Meherab Mustafa</div>
+    <div class="animated-text">Bioscience Student & Researcher</div>
 
-        <h1>Experience</h1>
-
-        <div class="card">
-            <div class="card-title">Thesis Researcher at BCSIR - Industrial Microbiology Lab</div>
-            <p>Worked on microbial pigments and industrial microbiology research, developing expertise in lab techniques and scientific analysis.</p>
-            <p><span class="edu-year">2023 - 2024</span></p>
-        </div>
-
-        <div class="card">
-            <div class="card-title">Research Assistant at SPARRSO</div>
-            <p>Conducted remote sensing data analysis and GIS mapping to support environmental monitoring projects.</p>
-            <p><span class="edu-year">2024 - Present</span></p>
-        </div>
-
-        <h1>Skills</h1>
-
-        <div class="card">
-            <div class="card-title">Technical Skills</div>
-            <ul class="left-text">
-                <li>Remote Sensing & GIS (Google Earth Engine, QGIS)</li>
-                <li>Programming (Python, R)</li>
-                <li>Data Analysis and Visualization</li>
-                <li>Laboratory Techniques in Microbiology</li>
-            </ul>
-        </div>
-
-        <h1>Research Skills</h1>
-
-        <div class="card">
-            <div class="card-title">Research Competencies</div>
-            <ul class="left-text">
-                <li>Design and execution of laboratory experiments</li>
-                <li>Scientific data collection and analysis</li>
-                <li>Literature review and technical writing</li>
-                <li>Remote sensing image processing and classification</li>
-            </ul>
-        </div>
-
+    <!-- Icons -->
+    <div class="icons" style="margin-top: 15px;">
+        <a href="mailto:meherabmustafa01@gmail.com" target="_blank" aria-label="Send email to Meherab Mustafa">
+            <i class="fa-solid fa-envelope"></i>
+        </a>
+        <a href="http://www.linkedin.com/in/meherab-mustafa-424a14295" target="_blank" aria-label="Visit Meherab Mustafa's LinkedIn">
+            <i class="fa-brands fa-linkedin"></i>
+        </a>
     </div>
 
+    <!-- Download CV -->
+    <div>
+        <a href="CV (Meherab Mustafa).pdf" download class="cv-button" title="Download CV">
+            <i class="fa-solid fa-file-arrow-down"></i> Download CV
+        </a>
+    </div>
+
+    <!-- About Me -->
+    <h2>About Me</h2>
+    <p>
+        I have an ongoing desire to continually develop my knowledge base across all aspects of Biosciences.
+        In this regard, I actively seek out both challenging and meaningful roles that allow me to utilize my
+        technical abilities, creative thinking, and research capabilities.
+    </p>
+
+    <p>
+        Currently, I work as a Research Fellow at <span class="edu-year">Bangladesh Space Research and Remote Sensing Organization (SPARRSO)</span>.
+        My role involves satellite images analysis, conducting environmental assessments and providing support to
+        evidence-based solutions related to Forest Management and Land-Use Planning.
+    </p>
+
+    <p>
+        Before joining SPARRSO, I worked as a Thesis Researcher at the Industrial Microbiology Laboratory of
+        <span class="edu-year">Bangladesh Council of Scientific and Industrial Research (BCSIR)</span> where I engaged in laboratory-based research,
+        developed techniques to optimize microbial processes and acquired practical experience in designing
+        experiments, analyzing data and producing scientific reports.
+    </p>
+
+    <p>
+        I am particularly interested in biotechnology, climate-smart agriculture, sustainable land systems,
+        environmental development. I enjoy working on multidisciplinary projects, learning new technologies,
+        and creating impactful scientific outputs.
+    </p>
+
+    <!-- Education -->
+    <h2>Education</h2>
+    <div class="left-text">
+        <p><span class="edu-year">2023-2025</span><br>
+        Master of Science in Botany<br>
+        University: University of Dhaka, Dhaka-1000, Bangladesh<br>
+        GPA: 4.00/4.00<br>
+        Thesis: Biotechnological Exploration of Pigment Producing Indigenous Bacteria From Mangrove Environment
+        </p>
+
+        <p><span class="edu-year">2018-2023</span><br>
+        Bachelor of Science in Botany<br>
+        University: University of Dhaka, Dhaka-1000, Bangladesh<br>
+        CGPA: 3.80/4.00
+        </p>
+
+        <p><span class="edu-year">2015-2017</span><br>
+        Higher Secondary Certificate | Science<br>
+        Institution: BPATC School and College, Dhaka, Bangladesh<br>
+        GPA: 5.00/5.00
+        </p>
+
+        <p><span class="edu-year">2013-2015</span><br>
+        Secondary School Certificate | Science<br>
+        Institution: BPATC School and College, Dhaka, Bangladesh<br>
+        GPA: 5.00/5.00
+        </p>
+    </div>
+
+    <!-- Experience -->
+    <h2>My Experience</h2>
+
+    <div class="card">
+        <div class="card-title">Research Fellow, Forestry Department</div>
+        <p><b>Institute:</b> Bangladesh Space Research and Remote Sensing Organization (SPARRSO)</p>
+        <p><b>Duration:</b> 22 October – Present</p>
+    </div>
+
+    <div class="card">
+        <div class="card-title">Thesis Researcher, Microbial Biotechnology Department</div>
+        <p><b>Institute:</b> Bangladesh Council of Scientific and Industrial Research (BCSIR)</p>
+        <p><b>Duration:</b> 30 January, 2024 – 30 July, 2025</p>
+    </div>
+
+    <!-- Skills -->
+    <h2>My Skills</h2>
+    <div class="card">
+        <p>MS Office (Excel, Word, PowerPoint)</p>
+        <p>MEGA 12, Chromas, OriginLab Software</p>
+    </div>
+
+    <!-- Research Skills -->
+    <h2>Research Skills</h2>
+    <div class="card">
+        <p>Conduct biochemical tests & molecular characterization</p>
+        <p>Spectroscopic analysis (FTIR, UV-Vis, HPLC)</p>
+        <p>Microscopic analysis, antimicrobial & antioxidant assays, fertility analysis</p>
+        <p>Tree-cover mapping, biomass estimation, forest health assessment</p>
+        <p>Remote sensing & satellite data analysis</p>
+        <p>GIS & geospatial analysis</p>
+    </div>
+
+    <!-- Contact -->
+    <h2>Contact Me</h2>
+    <div class="contact">
+        Address: Krishibid Heights, Jahangirnagar Housing Society, B-block, Savar, Dhaka-1340, Bangladesh<br><br>
+
+        <a href="mailto:meherabmustafa01@gmail.com" class="cv-button">meherabmustafa01@gmail.com</a>
+        <a href="mailto:meherab-2017114310@bot.du.ac.bd" class="cv-button">meherab-2017114310@bot.du.ac.bd</a><br><br>
+
+        📞 +8801796498307
+    </div>
+
+</div>
 </body>
 </html>
