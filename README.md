@@ -1,4 +1,3 @@
-
 <html>
 <head>
     <meta charset="UTF-8">
@@ -85,6 +84,27 @@
 
         ul.left-text li { font-size: 12px; margin-bottom: 12px; }
 
+        /* ⭐ GREEN CARD DESIGN (Experience & Skills) ⭐ */
+        .card {
+            background: #1b1b1b;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 10px;
+            border-left: 6px solid #00ff66;
+            box-shadow: 0 0 15px rgba(0,255,100,0.3);
+        }
+
+        .card-title {
+            color: #00ff66;
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        .card small {
+            color: #bbb;
+            font-size: 11px;
+        }
+
         @media screen and (max-width: 768px) {
             .container { width: 90%; padding: 20px 0; }
             h1 { font-size: 24px; }
@@ -123,8 +143,7 @@
         <a href="mailto:meherabmustafa01@gmail.com" target="_blank">
             <i class="fa-solid fa-envelope"></i>
         </a>
-        <a href="
-http://www.linkedin.com/in/meherab-mustafa-424a14295" target="_blank">
+        <a href="http://www.linkedin.com/in/meherab-mustafa-424a14295" target="_blank">
             <i class="fa-brands fa-linkedin"></i>
         </a>
     </div>
@@ -152,15 +171,7 @@ http://www.linkedin.com/in/meherab-mustafa-424a14295" target="_blank">
 
     <p>
         Before joining SPARRSO, I worked as a Thesis Researcher at the Industrial Microbiology Laboratory of
-        <span class="edu-year">Bangladesh Council of Scientific and Industrial Research (BCSIR)</span> where I engaged in laboratory-based research,
-        developed techniques to optimize microbial processes and acquired practical experience in designing
-        experiments, analyzing data and producing scientific reports.
-    </p>
-
-    <p>
-        I am particularly interested in biotechnology, climate-smart agriculture, sustainable land systems,
-        environmental development. I enjoy working on multidisciplinary projects, learning new technologies,
-        and creating impactful scientific outputs.
+        <span class="edu-year">Bangladesh Council of Scientific and Industrial Research (BCSIR)</span>.
     </p>
 
     <!-- Education -->
@@ -168,65 +179,52 @@ http://www.linkedin.com/in/meherab-mustafa-424a14295" target="_blank">
     <div class="left-text">
         <p><span class="edu-year">2023-2025</span><br>
         Master of Science in Botany<br>
-        University: University of Dhaka, Dhaka-1000, Bangladesh<br>
+        University of Dhaka<br>
         GPA: 4.00/4.00<br>
-        Thesis: Biotechnological Exploration of Pigment Producing Indigenous Bacteria From Mangrove Environment
+        Thesis: Biotechnological Exploration of Pigment Producing Indigenous Bacteria
         </p>
 
         <p><span class="edu-year">2018-2023</span><br>
         Bachelor of Science in Botany<br>
-        University: University of Dhaka, Dhaka-1000, Bangladesh<br>
+        University of Dhaka<br>
         CGPA: 3.80/4.00
-        </p>
-
-        <p><span class="edu-year">2015-2017</span><br>
-        Higher Secondary Certificate | Science<br>
-        Institution: BPATC School and College, Dhaka, Bangladesh<br>
-        GPA: 5.00/5.00
-        </p>
-
-        <p><span class="edu-year">2013-2015</span><br>
-        Secondary School Certificate | Science<br>
-        Institution: BPATC School and College, Dhaka, Bangladesh<br>
-        GPA: 5.00/5.00
         </p>
     </div>
 
-    <!-- Experience -->
+    <!-- ⭐ EXPERIENCE (GREEN CARD STYLE) ⭐ -->
     <h2>My Experience</h2>
-    <ul class="left-text">
-        <li><strong><span class="edu-year">Research Fellow</span>, Forestry Department</strong><br>
-            Institute: Bangladesh Space Research and Remote Sensing Organization (SPARRSO)<br>
-            Duration: 22 October - Present
-        </li>
-        <li><strong><span class="edu-year">Thesis Researcher</span>, Microbial Biotechnology Department</strong><br>
-            Institute: Bangladesh Council of Scientific and Industrial Research (BCSIR)<br>
-            Duration: 30 January, 2024 - 30 July, 2025
-        </li>
-    </ul>
+    <div class="card left-text">
+        <div class="card-title">Research Fellow, Forestry Department</div>
+        <small>Institute: SPARRSO</small><br>
+        <small>Duration: 22 October – Present</small>
+    </div>
 
-    <!-- Skills -->
+    <div class="card left-text">
+        <div class="card-title">Thesis Researcher, Microbial Biotechnology Department</div>
+        <small>Institute: BCSIR</small><br>
+        <small>Duration: 30 January 2024 – 30 July 2025</small>
+    </div>
+
+    <!-- ⭐ SKILLS (GREEN CARD STYLE) ⭐ -->
     <h2>My Skills</h2>
-    <ul class="left-text">
-        <li>MS Office (Excel, Word, Powerpoint)</li>
-        <li>MEGA 12, Chromas, Originlab software</li>
-    </ul>
 
-    <!-- Research Skills -->
+    <div class="card left-text">MS Office (Excel, Word, PowerPoint)</div>
+    <div class="card left-text">MEGA 12, Chromas, Originlab software</div>
+
+    <!-- ⭐ Research Skills (also green cards) ⭐ -->
     <h2>Research Skills</h2>
-    <ul class="left-text">
-        <li>Conduct biochemical tests and molecular characterization</li>
-        <li>Spectroscopic analysis (FTIR, UV-Vis, HPLC)</li>
-        <li>Microscopic analysis, antimicrobial and antioxidant assays, fertility analysis</li>
-        <li>Tree-cover mapping, biomass estimation, and forest health assessment</li>
-        <li>Remote sensing and satellite data analysis</li>
-        <li>GIS & Geospatial analysis</li>
-    </ul>
+
+    <div class="card left-text">Conduct biochemical tests and molecular characterization</div>
+    <div class="card left-text">Spectroscopic analysis (FTIR, UV-Vis, HPLC)</div>
+    <div class="card left-text">Microscopic analysis, antimicrobial & antioxidant assays</div>
+    <div class="card left-text">Tree-cover mapping, biomass estimation, forest health</div>
+    <div class="card left-text">Remote sensing and satellite data analysis</div>
+    <div class="card left-text">GIS & Geospatial analysis</div>
 
     <!-- Contact -->
     <h2>Contact Me</h2>
     <div class="contact">
-        Address: Krishibid Heights, Jahangirnagar Housing Society, B-block, Savar, Dhaka-1340, Bangladesh<br><br>
+        Address: Krishibid Heights, Savar, Dhaka-1340<br><br>
 
         <a href="mailto:meherabmustafa01@gmail.com" class="cv-button">meherabmustafa01@gmail.com</a>
         <a href="mailto:meherab-2017114310@bot.du.ac.bd" class="cv-button">meherab-2017114310@bot.du.ac.bd</a><br><br>
@@ -237,3 +235,4 @@ http://www.linkedin.com/in/meherab-mustafa-424a14295" target="_blank">
 </div>
 </body>
 </html>
+
