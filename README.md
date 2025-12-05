@@ -1,234 +1,239 @@
 
-<html lang="en">
+<html>
 <head>
     <meta charset="UTF-8">
     <title>Meherab Mustafa - Portfolio</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- ✅ FONT -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-
-    <!-- ✅ ICON -->
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
     <style>
-        * {
+        /* Dark Theme */
+        body {
+            font-family: "Times New Roman", serif;
+            background-color: #121212;
+            color: #f5f5f5;
             margin: 0;
             padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: Arial, sans-serif;
-            background: #000;
-            color: #fff;
-        }
-
-        section {
-            padding: 40px 20px;
-        }
-
-        h1, h2 {
-            font-family: 'Kristen ITC', 'Poppins', sans-serif;
-            color: #00bcd4;
-            margin-bottom: 12px;
-        }
-
-        /* ✅ HERO SECTION */
-        .hero {
             text-align: center;
-            padding-top: 60px;
         }
 
-        .hero p {
-            font-size: 14px;
-            opacity: 0.9;
-        }
+        a { text-decoration: none; transition: color 0.3s, background 0.3s; }
 
-        .hero img {
-            width: 160px;
-            border-radius: 50%;
-            margin: 16px 0;
-        }
+        .container { width: 80%; margin: auto; padding: 40px 0; }
 
+        /* Headings */
+        h1, h2 {
+            font-family: 'Arial Black', Arial, sans-serif;
+            color: #00bcd4;
+            margin-top: 40px;
+            margin-bottom: 15px;
+        }
+        h1 { font-size: 28px; }
+        h2 { font-size: 24px; }
+
+        /* Profile */
+        .name { font-size: 22px; color: #ffffff; margin: 5px 0; }
         .animated-text {
             font-size: 18px;
-            margin-top: 6px;
-            color: #00bcd4;
-            animation: glow 2s infinite alternate;
-        }
-
-        @keyframes glow {
-            0% { opacity: 0.6; }
-            100% { opacity: 1; }
-        }
-
-        /* ✅ CV ICON */
-        .cv-icon {
-            margin-top: 14px;
+            color: #00ffff;
+            border-right: 2px solid #00ffff;
+            white-space: nowrap;
+            overflow: hidden;
             display: inline-block;
-            color: #00bcd4;
-            font-size: 22px;
-            text-decoration: none;
+            animation: typing 3s steps(30, end) infinite, blink 0.75s step-end infinite;
         }
 
-        /* ✅ ABOUT ME */
-        #about p {
-            font-size: 8px;
-            line-height: 1.6;
-            opacity: 0.9;
+        @keyframes typing { 0%,100% { width: 0; } 50% { width: 270px; } }
+        @keyframes blink { 50% { border-color: transparent; } }
+
+        img {
+            border-radius: 50%;
+            margin: 20px 0;
+            width: 180px;
         }
 
-        .highlight {
-            color: #00bcd4;
-            font-weight: 600;
+        /* Icons */
+        .icons a {
+            margin: 0 10px;
+            font-size: 24px;
+            color: #f5f5f5;
+            transition: color 0.3s, transform 0.3s;
         }
+        .icons a:hover { color: #00bcd4; transform: scale(1.2); }
 
-        /* ✅ EXPERIENCE */
-        .experience-item {
-            margin-bottom: 18px;
-        }
-
-        .position {
-            color: #00bcd4;
-            font-size: 16px;
-            font-weight: 600;
-        }
-
-        .duration {
-            font-size: 12px;
-            opacity: 0.8;
-        }
-
-        /* ✅ EDUCATION */
-        .edu-item {
-            margin-bottom: 18px;
-        }
-
-        .year, .institute {
-            font-size: 15px;
-            font-weight: 600;
-            color: #00bcd4;
-        }
-
-        .degree, .subject {
-            font-size: 13px;
-            opacity: 0.9;
-        }
-
-        /* ✅ SKILLS */
-        .skills span {
+        /* CV button */
+        .cv-button {
             display: inline-block;
-            margin: 6px;
-            padding: 6px 12px;
+            padding: 10px 15px;
             border: 1px solid #00bcd4;
-            border-radius: 20px;
-            font-size: 13px;
-        }
-
-        /* ✅ FOOTER LINKS */
-        .links {
-            text-align: center;
-            margin-top: 20px;
-        }
-
-        .links a {
             color: #00bcd4;
-            margin: 0 12px;
-            text-decoration: none;
             font-size: 18px;
+            border-radius: 5px;
+            margin: 5px;
+            transition: 0.3s all;
+        }
+        .cv-button:hover { background-color: #00bcd4; color: #121212; box-shadow: 0 4px 15px rgba(0,188,212,0.4); }
+
+        /* Paragraphs */
+        p { line-height: 1.6; text-align: justify; font-size: 12px; }
+
+        .left-text { text-align: left; margin-top: 20px; }
+        .contact { text-align: left; margin-top: 40px; }
+
+        /* Highlight cyan */
+        .edu-year { color: #00ffff; font-weight: bold; }
+
+        ul.left-text li { font-size: 12px; margin-bottom: 12px; }
+
+        @media screen and (max-width: 768px) {
+            .container { width: 90%; padding: 20px 0; }
+            h1 { font-size: 24px; }
+            h2 { font-size: 22px; }
+            .name { font-size: 20px; }
+            .animated-text { font-size: 16px; }
+            img { width: 140px; }
+            .cv-button { padding: 8px 12px; font-size: 16px; }
+            .icons a { font-size: 20px; }
+            p, ul.left-text li { font-size: 11px; }
         }
 
-        /* ✅ MOBILE FIX */
-        @media (max-width: 768px) {
-            h1 {
-                font-size: 26px;
-            }
-
-            .animated-text {
-                font-size: 16px;
-            }
+        @media screen and (max-width: 480px) {
+            img { width: 120px; }
+            h1 { font-size: 22px; }
+            h2 { font-size: 20px; }
+            .name { font-size: 18px; }
+            .animated-text { font-size: 14px; }
+            .cv-button { padding: 6px 10px; font-size: 14px; }
+            p, ul.left-text li { font-size: 10px; }
         }
     </style>
 </head>
 
 <body>
+<div class="container">
 
-    <!-- ✅ HERO -->
-    <section class="hero">
-        <p>Hi There</p>
+    <!-- Header Section -->
+    <h1>HI THERE!</h1>
+    <img src="profile.jpg.jpeg" alt="Profile Image">
+    <div class="name">I’m Meherab Mustafa</div>
+    <div class="animated-text">Bioscience Student & Researcher</div>
 
-        <img src="your-photo.jpg.jpeg" alt="My Photo">
-
-        <h1>Meherab Mustafa</h1>
-
-        <div class="animated-text">Bioscience Student & Researcher</div>
-
-        <a class="cv-icon" href="cv.pdf" download>
-            <i class="fas fa-download"></i>
+    <!-- Icons -->
+    <div class="icons" style="margin-top: 15px;">
+        <a href="mailto:meherabmustafa01@gmail.com" target="_blank">
+            <i class="fa-solid fa-envelope"></i>
         </a>
-    </section>
-
-    <!-- ✅ ABOUT ME -->
-    <section id="about">
-        <h2>About Me</h2>
-        <p>
-            I am currently working as a research fellow at 
-            <span class="highlight">SPARRSO</span> and a thesis researcher at 
-            <span class="highlight">BCSIR</span>. My research interest focuses on microbiology, remote sensing and environmental analysis.
-        </p>
-    </section>
-
-    <!-- ✅ EXPERIENCE -->
-    <section class="experience">
-        <h2>Experience</h2>
-
-        <div class="experience-item">
-            <div class="position">Research Fellow</div>
-            <div class="duration">2024 - Present</div>
-        </div>
-
-        <div class="experience-item">
-            <div class="position">Thesis Researcher</div>
-            <div class="duration">2023 - 2024</div>
-        </div>
-    </section>
-
-    <!-- ✅ EDUCATION -->
-    <section class="education">
-        <h2>Education</h2>
-
-        <div class="edu-item">
-            <div class="year">2023 - 2025</div>
-            <div class="institute">MS in Bioscience</div>
-            <div class="degree">Master of Science</div>
-            <div class="subject">Biological Sciences</div>
-        </div>
-
-        <div class="edu-item">
-            <div class="year">2018 - 2022</div>
-            <div class="institute">BSc in Bioscience</div>
-            <div class="degree">Bachelor of Science</div>
-            <div class="subject">Biological Sciences</div>
-        </div>
-    </section>
-
-    <!-- ✅ SKILLS -->
-    <section class="skills">
-        <h2>Skills</h2>
-        <span>Remote Sensing</span>
-        <span>Microbiology</span>
-        <span>GIS</span>
-        <span>Data Analysis</span>
-        <span>Research Writing</span>
-    </section>
-
-    <!-- ✅ CONTACT LINKS -->
-    <div class="links">
-        <a href="mailto:yourmail@gmail.com"><i class="fas fa-envelope"></i></a>
-        <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a>
-        <a href="https://github.com" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="
+http://www.linkedin.com/in/meherab-mustafa-424a14295" target="_blank">
+            <i class="fa-brands fa-linkedin"></i>
+        </a>
     </div>
 
+    <!-- Download CV -->
+    <div>
+        <a href="CV (Meherab Mustafa).pdf" download class="cv-button" title="Download CV">
+            <i class="fa-solid fa-file-arrow-down"></i>
+        </a>
+    </div>
+
+    <!-- About Me -->
+    <h2>About Me</h2>
+    <p>
+        I have an ongoing desire to continually develop my knowledge base across all aspects of Biosciences.
+        In this regard, I actively seek out both challenging and meaningful roles that allow me to utilize my
+        technical abilities, creative thinking, and research capabilities.
+    </p>
+
+    <p>
+        Currently, I work as a Research Fellow at <span class="edu-year">Bangladesh Space Research and Remote Sensing Organization (SPARRSO)</span>.
+        My role involves satellite images analysis, conducting environmental assessments and providing support to
+        evidence-based solutions related to Forest Management and Land-Use Planning.
+    </p>
+
+    <p>
+        Before joining SPARRSO, I worked as a Thesis Researcher at the Industrial Microbiology Laboratory of
+        <span class="edu-year">Bangladesh Council of Scientific and Industrial Research (BCSIR)</span> where I engaged in laboratory-based research,
+        developed techniques to optimize microbial processes and acquired practical experience in designing
+        experiments, analyzing data and producing scientific reports.
+    </p>
+
+    <p>
+        I am particularly interested in biotechnology, climate-smart agriculture, sustainable land systems,
+        environmental development. I enjoy working on multidisciplinary projects, learning new technologies,
+        and creating impactful scientific outputs.
+    </p>
+
+    <!-- Education -->
+    <h2>Education</h2>
+    <div class="left-text">
+        <p><span class="edu-year">2023-2025</span><br>
+        Master of Science in Botany<br>
+        University: University of Dhaka, Dhaka-1000, Bangladesh<br>
+        GPA: 4.00/4.00<br>
+        Thesis: Biotechnological Exploration of Pigment Producing Indigenous Bacteria From Mangrove Environment
+        </p>
+
+        <p><span class="edu-year">2018-2023</span><br>
+        Bachelor of Science in Botany<br>
+        University: University of Dhaka, Dhaka-1000, Bangladesh<br>
+        CGPA: 3.80/4.00
+        </p>
+
+        <p><span class="edu-year">2015-2017</span><br>
+        Higher Secondary Certificate | Science<br>
+        Institution: BPATC School and College, Dhaka, Bangladesh<br>
+        GPA: 5.00/5.00
+        </p>
+
+        <p><span class="edu-year">2013-2015</span><br>
+        Secondary School Certificate | Science<br>
+        Institution: BPATC School and College, Dhaka, Bangladesh<br>
+        GPA: 5.00/5.00
+        </p>
+    </div>
+
+    <!-- Experience -->
+    <h2>My Experience</h2>
+    <ul class="left-text">
+        <li><strong><span class="edu-year">Research Fellow</span>, Forestry Department</strong><br>
+            Institute: Bangladesh Space Research and Remote Sensing Organization (SPARRSO)<br>
+            Duration: 22 October - Present
+        </li>
+        <li><strong><span class="edu-year">Thesis Researcher</span>, Microbial Biotechnology Department</strong><br>
+            Institute: Bangladesh Council of Scientific and Industrial Research (BCSIR)<br>
+            Duration: 30 January, 2024 - 30 July, 2025
+        </li>
+    </ul>
+
+    <!-- Skills -->
+    <h2>My Skills</h2>
+    <ul class="left-text">
+        <li>MS Office (Excel, Word, Powerpoint)</li>
+        <li>MEGA 12, Chromas, Originlab software</li>
+    </ul>
+
+    <!-- Research Skills -->
+    <h2>Research Skills</h2>
+    <ul class="left-text">
+        <li>Conduct biochemical tests and molecular characterization</li>
+        <li>Spectroscopic analysis (FTIR, UV-Vis, HPLC)</li>
+        <li>Microscopic analysis, antimicrobial and antioxidant assays, fertility analysis</li>
+        <li>Tree-cover mapping, biomass estimation, and forest health assessment</li>
+        <li>Remote sensing and satellite data analysis</li>
+        <li>GIS & Geospatial analysis</li>
+    </ul>
+
+    <!-- Contact -->
+    <h2>Contact Me</h2>
+    <div class="contact">
+        Address: Krishibid Heights, Jahangirnagar Housing Society, B-block, Savar, Dhaka-1340, Bangladesh<br><br>
+
+        <a href="mailto:meherabmustafa01@gmail.com" class="cv-button">meherabmustafa01@gmail.com</a>
+        <a href="mailto:meherab-2017114310@bot.du.ac.bd" class="cv-button">meherab-2017114310@bot.du.ac.bd</a><br><br>
+
+        📞 +8801796498307
+    </div>
+
+</div>
 </body>
 </html>
